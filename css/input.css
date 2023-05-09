@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .h-slate-1 {
+        @apply font-bold text-slate-700 flex justify-center
+    }
+
+    .h-slate-2 {
+        @apply font-bold text-slate-600 flex justify-center
+    }
+
+    .h-gradient {
+        @apply bg-clip-text bg-transparent text-transparent bg-gradient-to-r from-teal-500 via-sky-500 to-purple-500
+    }
+}
+
+@layer components {
+    .grid-card {
+        @apply aspect-[4/3] md:aspect-[3/4] lg:aspect-[4/3] bg-teal-500 rounded-lg hover:scale-95 overflow-hidden transition-all duration-500 shadow-lg
+    }
+
+    .grid-card-img {
+        @apply w-full h-full bg-cover object-cover bg-center rounded-lg group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 overflow-hidden
+    }
+}
+
+.hamburger-line {
+    @apply w-[30px] h-[2px] bg-slate-900 block my-2;
+}
+
+.hamburger-active > span:nth-child(1) {
+    @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+    @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+    @apply -rotate-45;
+}
+
+.fixed-nav {
+    @apply z-[9999] fixed bg-sky-500 bg-transparent backdrop-blur-sm;
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+}
